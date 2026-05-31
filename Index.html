@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday 🎉</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f7dede;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .page-1 {
+            display: block;
+        }
+
+        .gift-box {
+            font-size: 80px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .btn-next {
+            background-color: #d63384;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .page-2 {
+            display: none;
+        }
+
+        .card-box {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: left;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            min-height: 280px;
+            box-sizing: border-box;
+        }
+
+        .question-title {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            color: #111;
+            margin-bottom: 20px;
+        }
+
+        .options-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .option-item {
+            font-family: 'Georgia', serif;
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 8px;
+            cursor: pointer;
+            width: fit-content;
+        }
+
+        .signature-option {
+            font-family: 'Caveat', cursive;
+            font-size: 28px;
+            color: #555;
+            position: absolute;
+            bottom: 25px;
+            right: 35px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="page-1" id="page1">
+            <div class="gift-box">🎁</div>
+            <button class="btn-next" onclick="nextPage()">افتح الهدية ✨</button>
+        </div>
+
+        <div class="page-2" id="page2">
+            <div class="card-box">
+                <div class="question-title">choose</div>
+                <ul class="options-list">
+                    <li class="option-item" onclick="alert('غصبن عنش')">a - enta</li>
+                    <li class="option-item" onclick="alert('غصبن عنش')">b - a</li>
+                    <li class="option-item" onclick="alert('غصبن عنش')">c - b</li>
+                </ul>
+                <div class="signature-option" onclick="alert('جببببب')">d - haya</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            document.getElementById('page1').style.display = 'none';
+            document.getElementById('page2').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
